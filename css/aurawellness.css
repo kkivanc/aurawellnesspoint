@@ -435,7 +435,7 @@ h1, h2, h3, h4 {
 /* ===== Services ===== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
@@ -529,7 +529,7 @@ h1, h2, h3, h4 {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
@@ -578,6 +578,141 @@ h1, h2, h3, h4 {
   font-size: 2rem;
   font-weight: 700;
   color: #0d9488;
+}
+
+/* ===== Treatment Plans ===== */
+.treatment-plans {
+  margin-top: 90px;
+}
+
+.treatment-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.treatment-header .section-tag {
+  margin-bottom: 16px;
+}
+
+.treatment-header h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem;
+  color: #1a1a2e;
+  margin-bottom: 14px;
+}
+
+.treatment-header p {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.package-table {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.package-table:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.package-table h4 {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.package-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.package-table th,
+.package-table td {
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.package-table th {
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.package-table th:first-child,
+.package-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.package-table tbody tr {
+  border-top: 1px solid #f1f5f9;
+  transition: background 0.2s ease;
+}
+
+.package-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.package-table td {
+  color: #0d9488;
+  font-weight: 600;
+}
+
+/* Highlight the best-value 12-session column */
+.package-table th:last-child {
+  color: #0d9488;
+}
+
+.package-table th:last-child,
+.package-table td:last-child {
+  background: rgba(13, 148, 136, 0.06);
+}
+
+.package-notes {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0;
+  max-width: 760px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 32px;
+}
+
+.package-notes li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.package-notes li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: #0d9488;
+  font-weight: 700;
 }
 
 /* ===== Contact ===== */
@@ -876,6 +1011,14 @@ h1, h2, h3, h4 {
     gap: 40px;
   }
 
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -914,6 +1057,20 @@ h1, h2, h3, h4 {
 
   .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .package-table th,
+  .package-table td {
+    padding: 12px 10px;
+    font-size: 0.85rem;
   }
 
   .pricing-tabs {
